@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+<header><h1>Poor Childs Helper</h1></header>
+<nav>
+	<ul>
+		<li><a href="" title="">Home</a></li>
+		<li><a href="" title="">About</a></li>
+		<li><a href="" title="">Blog</a></li>
+		<li><a href="" title="">Shop</a></li>
+		<li><a href="" title="">Gallery</a></li>
+		<li><a href="/contacts/new" title="">Contact</a></li>
+	</ul>
+	<div class="handle">Menu</div>
+</nav>
+
+
+
+<section>
+	<%= link_to "Sign Up", new_user_registration_path %>
+	<%= link_to "Sign In", new_user_session_path %>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
+
+	<%= yield %>
+</section>
+<footer><p>Made by Dang Anh Tu</p></footer>
+<script>
+	$('.handle').on('click',function(){
+		$('nav ul').toggleClass('showing');
+	});
+</script>
+</body>
+</html>
